@@ -21,7 +21,15 @@ function App() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-2xl  mb-4">
-        {count === 0 ? "Tap the trout!" : `You tapped ${count} times!`}
+        {count === 0 ? (
+          "Tap the trout!"
+        ) : (
+          <span>
+            You've tapped it{" "}
+            <span className="text-zinc-800 font-bold">{count}</span>{" "}
+            {count === 1 ? "time" : "times"}!
+          </span>
+        )}
       </h1>
       <button onMouseDown={handleClick}>
         <img
