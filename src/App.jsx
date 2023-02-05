@@ -64,7 +64,7 @@ function App() {
     }, 100);
 
     // If the count is divisible by a power of 10, explode the confetti
-    if ((count + 1).toString().match(/10{1,}$/)) {
+    if ((count + 1).toString().match(/^10{1,}$/)) {
       setIsExploding(true);
       setTimeout(() => {
         setIsExploding(false);
