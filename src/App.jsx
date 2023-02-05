@@ -79,8 +79,7 @@ function App() {
           "Tap the trout!"
         ) : (
           <span>
-            You've tapped it{" "}
-            <span className="text-zinc-800 font-bold">{count}</span>{" "}
+            You tapped <span className="text-zinc-800 font-bold">{count}</span>{" "}
             {count === 1 ? "time" : "times"}!
           </span>
         )}
