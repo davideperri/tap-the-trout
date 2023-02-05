@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   html {
-    font-family: 'Comic Mono', monospace;
+    font-family: "Comic Mono", monospace;
+  }
+  /* Remove tap highlight in mobile browsers */
+  * {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 }
