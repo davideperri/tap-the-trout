@@ -89,7 +89,7 @@ function App() {
       <button onMouseDown={handleClick}>
         <img
           src="/trout.png"
-          className="w-64 h-auto transform z-50 select-none"
+          className="w-64 h-auto transform z-50 select-none drag-none"
         />
         <div className="flex flex-col z-0 items-center justify-center skew-y-[60deg] -rotate-[65deg] -translate-y-1/3">
           <div
