@@ -49,7 +49,14 @@ function App() {
 
   // Show the image in the center of the screen. When we click on the image,
   // it should jump a little bit in the air and then come back down.
+
+  function checkSpaceBar(event){
+    if (event.key == " " || event.code == "Space" || event.keyCode == 32)
+    handleClick();
+  };
+
   function handleClick() {
+
     setCount(count + 1);
     // Animate the trout by moving it up and down once.
     const trout = document.querySelector("img");
@@ -69,7 +76,8 @@ function App() {
       setTimeout(() => {
         setIsExploding(false);
       }, CONFETTI_DURATION);
-    }
+    };
+
   }
 
   return (
@@ -85,7 +93,7 @@ function App() {
         )}
       </h1>
       <SmartConfetti isExploding={isExploding}></SmartConfetti>
-      <button onMouseDown={handleClick}>
+      <button id="trout" onMouseDown={handleClick} onKeyDown={checkSpaceBar}>
         <img
           src="/trout.png"
           className="w-64 h-auto transform z-50 select-none drag-none"
